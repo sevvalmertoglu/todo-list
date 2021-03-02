@@ -34,7 +34,7 @@ import axios from 'axios';
                     .then((response) => {
                         console.log(response)
                         this.$emit("authenticated", true)
-                        this.$router.replace({ name: "secure" })
+                        this.$router.replace({ name: "home" })
                     }
                     
                     ).catch(() => console.log("Yanlış şifre veya kullanıcı adı."));

@@ -13,10 +13,6 @@
         data() {
             return {
                 authenticated: false,
-                mockAccount: {
-                    username: "nraboy",
-                    password: "password"
-                }
             }
         },
         mounted() {
