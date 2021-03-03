@@ -14,8 +14,8 @@
     </div>
 </template>
 
-<script>
-import axios from 'axios';
+<script> 
+import axios from 'axios'; 
     export default {
         name: 'Login',
         data() {
@@ -37,7 +37,7 @@ import axios from 'axios';
                         this.$router.replace({ name: "home" })
                     }
                     
-                    ).catch(() => console.log("Yanlış şifre veya kullanıcı adı."));
+                    ).catch(() => console.log("Wrong password or username."));
                 }
 
                     
