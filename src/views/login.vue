@@ -32,9 +32,11 @@ import axios from 'axios';
                     const dataForPostRequest = { "username": this.input.username , "password":this.input.password};
                     axios.post("https://aodapi.eralpsoftware.net/login/apply", dataForPostRequest)
                     .then((response) => {
-                        console.log(response)
+                        console.log(response.data.token)
                         this.$emit("authenticated", true)
-                        this.$router.replace({ name: "home" })
+                        this.$router.push({ name: "home",params: {  
+                            ourToken: response.data.token 
+                        } })
                     }
                     
                     ).catch(() => console.log("Wrong password or username."));
@@ -47,6 +49,7 @@ import axios from 'axios';
             }     
         }
     }
+    
 </script>
 
 <style scoped>
